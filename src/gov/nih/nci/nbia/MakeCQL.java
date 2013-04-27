@@ -32,7 +32,7 @@ import com.pixelmed.dicom.DicomDictionary;
 import com.pixelmed.dicom.ShortStringAttribute;
 import com.pixelmed.dicom.SpecificCharacterSet;
 import com.pixelmed.dicom.TagFromName;
-
+//MakeSQL Test.
 public class MakeCQL {
 	final static Logger logger = Logger.getLogger(MakeCQL.class);
 	Properties prop = new Properties();
