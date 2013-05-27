@@ -1,11 +1,11 @@
 package gov.nih.nci.nbia;
 
+import edu.emory.cci.ivi.helper.HashmapToCQLQuery;
+import edu.emory.cci.ivi.helper.ModelMap;
+import edu.emory.cci.ivi.helper.ModelMapException;
 import gov.nih.nci.cagrid.cqlquery.CQLQuery;
 import gov.nih.nci.cagrid.cqlquery.QueryModifier;
 import gov.nih.nci.cagrid.data.MalformedQueryException;
-import gov.nih.nci.ivi.dicom.HashmapToCQLQuery;
-import gov.nih.nci.ivi.dicom.modelmap.ModelMap;
-import gov.nih.nci.ivi.dicom.modelmap.ModelMapException;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -46,7 +46,7 @@ public class MakeCQL {
 		if(criteriaList == null || value == null){
 			return null;
 		}
-		HashMap<String, String> query = new HashMap<String, String>();
+		Map<String, String> query = new HashMap<String, String>();
 		if(value == CQLTargetName.PATIENT){
 			query.put(HashmapToCQLQuery.TARGET_NAME_KEY, gov.nih.nci.ncia.domain.Patient.class.getCanonicalName());
 		}else if( value == CQLTargetName.STUDY){
